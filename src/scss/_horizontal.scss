@@ -1,0 +1,189 @@
+#horizontal {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: $horizontal-height;
+
+  &:before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.85);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: $horizontal-height;
+    width: 9999px;
+  }
+
+  .background {
+    position: absolute;
+    right: 0;
+    background-color: $dark-grey;
+    height: 100%;
+    width: 100vw;
+  }
+
+  .years {
+    position: absolute;
+    top: 13px;
+    left: 86px;
+
+    .year {
+      font-size: 9px;
+      line-height: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $mid-grey;
+      position: absolute;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 150px;
+        background-color: $mid-grey;
+        position: absolute;
+        top: 15px;
+        left: 13px;
+      }
+    }
+  }
+
+  .bullets {
+    position: absolute;
+    display: flex;
+    top: 40px;
+    left: 90px;
+
+    .jewel {
+      position: absolute;
+      bottom: 60px;
+      color: white;
+      transform: translate(-50%, 20px);
+      opacity: 0;
+      transition: 0.5s transform, 0.5s opacity;
+      pointer-events: none;
+
+      img {
+        height: 20px;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        width: 2px;
+        height: 20px;
+        background-color: $dark-grey;
+        margin: 10px auto 0;
+        transform: translateX(-1px);
+      }
+    }
+
+    button {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+
+      &:before,
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        border-radius: 9999px;
+        background-color: $light-grey;
+        width: 6px;
+        height: 6px;
+        margin: -3px;
+      }
+
+      &:after {
+        background-color: white;
+        transform: scale(0);
+        transition: 0.3s background-color, 0.3s transform;
+      }
+
+      &.big {
+        z-index: 1;
+
+        &:before, {
+          background-color: black;
+          border: 2px solid $light-grey;
+          width: 12px;
+          height: 12px;
+          margin: -8px;
+        }
+
+        &:after {
+          background-color: $orange;
+          width: 16px;
+          height: 16px;
+          margin: -8px;
+          transform: scale(0.25);
+        }
+      }
+
+      &:hover,
+      &.active {
+        z-index: 2;
+
+        &:after {
+          transform: scale(1);
+        }
+
+        &.big {
+          &:after {
+            background-color: white;
+          }
+        }
+      }
+
+      &.active {
+        .jewel {
+          transform: translate(-50%, 0);
+          opacity: 1;
+          cursor: pointer;
+          pointer-events: auto;
+        }
+      }
+    }
+  }
+
+  .info {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px;
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
+    width: 50vw;
+    box-sizing: border-box;
+    text-shadow: 0 1px 0 $dark-grey;
+
+    .value {
+      color: $orange;
+      margin-bottom: 10px;
+    }
+
+    .date,
+    .extra {
+      font-size: 9px;
+      line-height: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .extra {
+      color: $mid-grey;
+    }
+
+    &.after-middle {
+      transform: translateX(-100%);
+      text-align: right;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+#vertical {
+  position: fixed;
+  top: $vertical-top;
+  left: 99px;
+  height: calc(100vh - #{$vertical-top + $horizontal-height});
+  border-left: 1px solid $dark-grey;
+  pointer-events: none;
+
+  @media (min-width: $desktop-width) {
+    pointer-events: inherit;
+  }
+
+  .label {
+    font-size: 14px;
+    color: $mid-grey;
+    padding-left: 15px;
+    visibility: hidden;
+
+    @media (min-width: $desktop-width) {
+      visibility: inherit;
+    }
+  }
+
+  .info {
+    position: relative;
+    height: calc(100% - 100px);
+    margin: 50px 0;
+
+    .text {
+      position: absolute;
+      bottom: 0;
+      padding-left: 15px;
+      width: 200px;
+      color: white;
+      font-size: 14px;
+      line-height: 20px;
+      transform: translateY(50%);
+      background-color: black;
+
+      @media (min-width: $desktop-width) {
+        background-color: transparent;
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 10px;
+        border: 2px solid $orange;
+        border-radius: 9999px;
+        position: absolute;
+        left: -7px;
+        top: 3px;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        width: 4px;
+        height: 4px;
+        background-color: white;
+        border-radius: 9999px;
+        position: absolute;
+        left: -2px;
+        top: 8px;
+      }
+    }
+
+    .value {
+      font-size: 14px;
+      color: $orange;
+    }
+  }
+}

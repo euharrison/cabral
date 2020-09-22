@@ -1,0 +1,72 @@
+$orange: #e98d20;
+$light-grey: #7f7f7f;
+$mid-grey: #808080;
+$dark-grey: #2a2a2a;
+
+$desktop-width: 960px;
+
+$vertical-top: 100px;
+$horizontal-height: 180px;
+
+@function responsive($value1, $value2, $width1: 320, $width2: 1920) {
+  $x1: $width1;
+  $x2: $width2;
+  $y1: $value1;
+  $y2: $value2;
+  $a: ($y2 - $y1) / ($x2 - $x1);
+  $b: ($x2 * $y1 - $x1 * $y2) / ($x2 - $x1);
+  @return calc(#{$a * 100vw} + #{$b * 1px});
+}
+
+@mixin modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+
+  .background {
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    padding: 30px;
+    text-align: center;
+  }
+}
+
+@mixin hover-underline {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:after {
+    content: '';
+    display: block;
+    background-color: white;
+    height: 1px;
+    width: calc(100% + 30px);
+    margin-top: 10px;
+    transform: scaleX(0);
+    transition: 0.3s transform;
+  }
+
+  &:hover {
+    &:after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+@mixin button-underline {
+  @include hover-underline;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+}

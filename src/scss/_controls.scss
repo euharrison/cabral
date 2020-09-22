@@ -1,0 +1,46 @@
+#controls {
+  position: fixed;
+  top: $vertical-top - 50px;
+  left: 78px;
+
+  svg,
+  img {
+    height: 35px;
+    width: auto;
+  }
+
+  svg {
+    .stroke {
+      fill: none;
+      stroke: #fff;
+      stroke-miterlimit: 10;
+      stroke-width: 2px;
+    }
+
+    .fill {
+      fill: #fff;
+    }
+  }
+
+  button {
+    opacity: 0.75;
+    transition: 0.3s opacity;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .rewind {
+    margin-left: 35px;
+    visibility: hidden;
+
+    @media (min-width: $desktop-width) {
+      visibility: inherit;
+    }
+  }
+
+  .play {
+    display: none;
+  }
+}

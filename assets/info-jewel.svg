@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="104" viewBox="0 0 128 104">
+  <defs>
+    <style>
+      .a {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 8px;
+        animation: flip 2s infinite alternate;
+        transform-origin: 60px 0;
+      }
+      @keyframes flip {
+        0% { transform: scaleX(0); }
+        100% { transform: scaleX(1); }
+      }
+    </style>
+  </defs>
+  <polygon class="a" points="102.26 4 124 34.09 124 34.09 64 100 4 34.09 4 34.09 25.74 4 102.26 4"/>
+</svg>

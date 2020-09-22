@@ -1,0 +1,93 @@
+#overlays {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  perspective: 100px;
+
+  .jewel {
+    position: absolute;
+    left: 50vw;
+    top: calc(50vh - 100px);
+
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      height: 20px;
+      margin-top: 2px;
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.3s opacity, 0.3s transform;
+    }
+
+    button {
+      width: 50px;
+      height: 50px;
+      border-radius: 9999px;
+      position: relative;
+      border: 2px solid transparent;
+      transition: 0.3s background-color, 0.3s border-color;
+      animation: pulse 2s alternate infinite;
+
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        100% { transform: scale(0.5); }
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        border-radius: 9999px;
+        background-color: white;
+        width: 50px;
+        height: 50px;
+        margin: -25px;
+        transform: scale(0.12);
+        transition: 0.3s background-color, 0.3s transform;
+      }
+
+      &.active,
+      &:hover {
+        animation: none;
+        border: 2px solid white;
+        background-color: black;
+
+        img {
+          opacity: 1;
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+
+      &:hover {
+        &:before {
+          transform: scale(1);
+        }
+      }
+    }
+    
+    &:nth-child(even) {
+      button {
+        animation-delay: 1s;
+      }
+    }
+
+    @mixin responsive-jewel($x, $y) {
+      transform: translate( responsive($x * 0.5, $x * 1.3), responsive($y * 0.6, $y * 1.1) );
+    }
+
+    &:nth-child(1)  { @include responsive-jewel(  49,  138); }
+    &:nth-child(2)  { @include responsive-jewel(-202,  110); }
+    &:nth-child(3)  { @include responsive-jewel( -10,   24); }
+    &:nth-child(4)  { @include responsive-jewel(-140,  -20); }
+    &:nth-child(5)  { @include responsive-jewel(  59,  -27); }
+    &:nth-child(6)  { @include responsive-jewel( 160,   72); }
+    &:nth-child(7)  { @include responsive-jewel(  66, -153); }
+    &:nth-child(8)  { @include responsive-jewel( -10,  -85); }
+    &:nth-child(9)  { @include responsive-jewel( -97,  -37); }
+    &:nth-child(10) { @include responsive-jewel( -41,   58); }
+  }
+}

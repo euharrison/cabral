@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <title>As Joias do Cabral</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="build/css/style.css">
+    <link rel="icon" href="assets/favicon.png" />
+    <meta property="og:url" content="http://asjoiasdocabral.rio" />
+    <meta property="og:title" content="As Joias do Cabral" />
+    <meta property="og:description" content="Uma experiência interativa sobre as joias compradas por Sérgio Cabral, ex-governador do Rio de Janeiro, com dinheiro recebido como propina entre 2007 e 2016, divulgadas durante a Operação Calicute" />
+    <meta property="og:image" content="http://asjoiasdocabral.rio/assets/facebook.jpg" />
+  </head>
+  <body>
+
+    <img src="assets/cabral.jpg" id="picture-image">
+    <div id="container"></div>
+
+    <div id="overlays"></div>
+
+    <div id="horizontal">
+      <div class="background"></div>
+      <div class="years"></div>
+      <div class="bullets"></div>
+      <div class="info">
+        <div class="name"></div>
+        <div class="value"></div>
+        <div class="date"></div>
+        <div class="extra"></div>
+      </div>
+    </div>
+
+    <div id="vertical">
+      <div class="label">
+        Valores totais
+      </div>
+      <div class="info">
+        <div class="text">
+          <div class="counter"></div>
+          <div class="value"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="controls">
+      <img src="assets/info-jewel.svg" class="jewel">
+      <button class="rewind">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35">
+          <title>Reiniciar</title>
+          <circle class="stroke" cx="17.5" cy="17.5" r="16.5"/>
+          <polygon class="fill" points="19.46 13.58 12.93 17.5 19.46 21.42 19.46 13.58"/>
+          <polygon class="fill" points="26 13.58 19.46 17.5 26 21.42 26 13.58"/>
+          <rect class="fill" x="9" y="11.62" width="2" height="12"/>
+        </svg>
+      </button>
+      <button class="play">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35">
+          <title>Play</title>
+          <circle class="stroke" cx="17.5" cy="17.5" r="16.5"/>
+          <polygon class="fill" points="14.56 11.62 24.36 17.5 14.56 23.38 14.56 11.62"/>
+        </svg>
+      </button>
+    </div>
+
+    <div id="info-jewel">
+      <div class="background">
+        <div class="container">
+          <p class="image"><img src="assets/info-jewel.svg" class="jewel"></p>
+          <p class="slogan">Top 10 joias</p>
+          <p>
+            <div class="name"></div>
+            <div class="value"></div>
+          </p>
+          <p class="description"></p>
+          <p class="extra"></p>
+          <button class="fechar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+              <title>Fechar</title>
+              <circle class="outline" cx="17.84" cy="17.84" r="16.84"/>
+              <rect class="fill" x="16.84" y="11.84" width="2" height="12" transform="translate(-7.39 17.84) rotate(-45)"/>
+              <rect class="fill" x="16.84" y="11.84" width="2" height="12" transform="translate(17.84 43.06) rotate(-135)"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="tutorial">
+      <div class="background">
+        <div class="container">
+          <p><img src="assets/tutorial.svg"></p>
+          <p>Utilize o scroll da página para navegar pela timeline</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="intro">
+      <div class="background">
+        <div class="container">
+          <h1><span class="as">As</span> <span>Joias</span> <span>do</span> <span>Cabral</span></h1>
+          <h2>Uma experiência interativa sobre as joias compradas por Sérgio Cabral, ex-governador do Rio de Janeiro, com dinheiro recebido como propina entre 2007 e 2016, divulgadas durante a Operação Calicute</h2>
+          <button><span>Iniciar</span></button>
+        </div>
+      </div>
+    </div>
+
+    <div id="info">
+      <div class="background">
+        <div class="container">
+          <div class="text">
+            <p><img src="assets/info-jewel.svg" class="jewel"></p>
+            <p>Cabral se torna réu pela primeira vez em 6 de dezembro de 2016. Ele é acusado de ter cometido os crimes de corrupção passiva 49 vezes, lavagem de dinheiro 164 vezes, quadrilha e organização criminosa. O processo se refere à Operação Calicute, que o prendeu em novembro. O ex-governador é acusado, junto com outras 12 pessoas, entre elas a ex-primeira-dama Adriana Ancelmo, de desviar cerca de R$ 224 milhões de contratos do governo do estado desde 2007, quando assumiu o cargo.</p>
+            <p>Somente as construtoras Andrade Gutierrez e Carioca Engenharia teriam repassado R$ 30 milhões ao esquema, referente a obras como a reforma do Maracanã e o Arco Metropolitano, em troca de aditivos em contratos públicos e incentivos fiscais Segundo o MPF, Cabral recebia 5% do valor de contratos da Andrade. O dinheiro apontado como propina teria sido usado em compra de joias e despesas de luxo.</p>
+          </div>
+          <div class="links">
+            <p><a href="http://oglobo.globo.com/brasil/entenda-que-pesa-contra-sergio-cabral-20925848" target="_blank">Matéria do Jornal O Globo</a></p>
+            <p><a href="http://infogbucket.s3.amazonaws.com/arquivos/2017/02/14/primeira-denuncia-contra-cabral-06-12-2016.pdf" target="_blank">Denúncia do MPF</a></p>
+          </div>
+          <div class="credits">
+            Por <a href="http://grama.cc" target="_blank">Grama</a> & <a href="http://kmkstudio.co" target="_blank">KMK Studio</a>
+            <br><br>
+            <small>Foto: <a href="http://www.apimages.com/metadata/Index/Brazil-Petrobras/00368d25b2c64574a566c1c1586e36ac/15/0" target="_blank">Victor Caivano / AP Photo</a></small>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <nav id="nav">
+      <button><span>Info</span></button>
+    </nav>
+
+    <script type="x-shader/x-vertex" id="vertexshader">
+      attribute vec3 color;
+      attribute float shineTime;
+
+      varying vec3 vColor;
+      varying float vDepth;
+      varying float vShineTime;
+
+      void main() {
+        vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+        gl_PointSize = 2.0;
+        gl_Position = projectionMatrix * mvPosition;
+
+        vColor = color;
+        vDepth = -mvPosition.z;
+        vShineTime = shineTime;
+      }
+    </script>
+
+    <script type="x-shader/x-fragment" id="fragmentshader">
+      uniform vec2 u_resolution;
+      uniform float u_time;
+      uniform sampler2D u_tex0;
+
+      varying vec3 vColor;
+      varying float vDepth;
+      varying float vShineTime;
+
+      void main() {
+        float timeScaled = u_time * 0.003;
+        float currentTime = mod(timeScaled,  1.0);
+
+        float white = -0.15;
+        float blinkDuration = 0.005;
+        float deltaTime = abs(currentTime - vShineTime);
+        if ( deltaTime < blinkDuration ) {
+          float maxWhite = 0.35;
+          white = ( 1.0 - deltaTime/blinkDuration ) * maxWhite;
+        }
+
+        vec3 mixedColor = mix( vColor, vec3(1.0), white );
+        gl_FragColor = vec4( mixedColor, 1.0 );
+      }
+    </script>
+
+    <script src="build/js/script.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-90118955-2', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+  </body>
+</html>

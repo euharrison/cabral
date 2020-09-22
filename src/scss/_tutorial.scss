@@ -1,0 +1,19 @@
+#tutorial {
+  @include modal;
+  z-index: 1;
+
+  .container {
+    max-width: 360px;
+  }
+
+  p {
+    margin: 30px 0;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  img {
+    height: 140px;
+    width: auto;
+  }
+}

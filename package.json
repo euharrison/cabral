@@ -1,0 +1,38 @@
+{
+  "name": "cabral",
+  "version": "1.0.0",
+  "main": "index.html",
+  "description": "As jóias de Cabral",
+  "scripts": {
+    "build": "node ./node_modules/gulp/bin/gulp.js",
+    "watch": "node ./node_modules/gulp/bin/gulp.js watch",
+    "production": "node ./node_modules/gulp/bin/gulp.js production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/grama-cc/cabral.git"
+  },
+  "author": "Grama",
+  "license": "CC-BY-SA-4.0",
+  "bugs": {
+    "url": "https://github.com/grama-cc/cabral/issues"
+  },
+  "homepage": "https://github.com/grama-cc/cabral",
+  "devDependencies": {
+    "del": "^2.2.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean-css": "^2.0.11",
+    "gulp-concat": "^2.6.0",
+    "gulp-if": "^2.0.1",
+    "gulp-sass": "^2.1.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.4"
+  },
+  "dependencies": {
+    "animejs": "^2.0.1",
+    "jquery": "^3.1.1",
+    "slug": "^0.9.1",
+    "three": "^0.84.0"
+  }
+}

@@ -1,0 +1,70 @@
+#info-jewel {
+  @include modal;
+  z-index: 9;
+  visibility: hidden;
+  opacity: 0;
+
+  .background {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .container {
+    position: relative;
+    max-width: 480px;
+    margin: 30px;
+    padding: 30px 0 0;
+  }
+
+  .image {
+    img {
+      max-height: 200px;
+      width: 100%;
+    }
+  }
+
+  .slogan {
+    font-size: 12px;
+    color: $orange;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .name {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .value {
+    font-size: 24px;
+    color: $orange;
+  }
+
+  .description {
+    margin: 30px 0;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .extra {
+    font-size: 12px;
+    font-weight: bold;
+    color: $mid-grey;
+    text-transform: uppercase;
+  }
+
+  .fechar {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    .outline {
+      fill: none;
+      stroke: white;
+      stroke-width: 2px;
+    }
+
+    .fill {
+      fill: white;
+    }
+  }
+}
